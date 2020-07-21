@@ -1,0 +1,9 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, li, ul{
+  font-size: 100%;
+  margin: 0%;
+  padding: 0%;
+  border: 0%;
+  text-decoration: none;
+  list-style: none;
+  vertical-align: baseline;
+}

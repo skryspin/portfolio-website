@@ -1,6 +1,19 @@
+import 'bootstrap/dist/css/bootstrap.css';
+
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
+import Dropdown from 'react-bootstrap/Dropdown';
+
+
+
+
+
+import headshot from './headshot.jpg'; // Tell webpack this JS file uses this image
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -30,20 +43,45 @@ function Home() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={headshot}
+        alt="Seb smiling, dressed in a pleather jacket, button-down shirt, T-shirt and a beanie"/>
         <p>
           This is my web development playground.
           Say 'hi' to me in the following places:
+          <a
+            className="App-link"
+            href="https://www.linkedin.com/in/skryspin/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Seb Kryspin on LinkedIn
+          </a>
         </p>
-        <a
-          className="App-link"
-          href="https://www.linkedin.com/in/skryspin/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Seb Kryspin on LinkedIn
-        </a>
+
       </header>
+      <Container>
+  <Row>
+    <Col lg={true}>1 of 2</Col>
+    <Col lg={true}>2 of 2</Col>
+  </Row>
+  <Row>
+    <Col lg={true}>1 of 3</Col>
+    <Col lg={true}>2 of 3</Col>
+    <Col lg={true}>3 of 3</Col>
+  </Row>
+</Container>
+<Button>this a button!</Button>
+<Dropdown>
+  <Dropdown.Toggle variant="success" id="dropdown-basic">
+    Dropdown Button
+  </Dropdown.Toggle>
+
+  <Dropdown.Menu>
+    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+  </Dropdown.Menu>
+</Dropdown>
     </div>
   );
 }
