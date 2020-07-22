@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
-
+import Image from 'react-bootstrap/Image';
 
 
 
@@ -43,8 +43,7 @@ function Home() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={headshot}
-        alt="Seb smiling, dressed in a pleather jacket, button-down shirt, T-shirt and a beanie"/>
+
         <p>
           This is my web development playground.
           Say 'hi' to me in the following places:
@@ -59,15 +58,18 @@ function Home() {
         </p>
 
       </header>
-      <Container>
+      <Container fluid>
   <Row>
-    <Col lg={true}>1 of 2</Col>
-    <Col lg={true}>2 of 2</Col>
+    <Col xs={{span:12, order:1}} sm={{span:12, order:1}} md={{span:6, order:0}} xl={{span:6, order:0}} g={{span:6, order:0}}><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lectus nunc, consequat id tellus porta, ultrices sollicitudin nisl. Mauris dapibus malesuada ultrices. Nulla aliquet, purus eget imperdiet fringilla, lorem diam tristique est, quis tempor ante ante in purus. Suspendisse nec faucibus ligula. Praesent lacus diam, tempus nec leo et, consectetur convallis nunc. Vestibulum facilisis vehicula aliquam. Curabitur suscipit quam at nibh sagittis, non viverra diam hendrerit. Ut sed euismod tortor. In hac habitasse platea dictumst. Curabitur hendrerit blandit iaculis. Fusce metus nisi, tristique tristique eleifend et, feugiat vel magna. Duis vestibulum euismod tincidunt. Vestibulum cursus, arcu in congue commodo, lacus orci pharetra massa, id mollis dui dui ut neque.
+
+Donec purus orci, posuere et scelerisque ac, laoreet eu arcu. Sed nec nibh lobortis, lacinia mauris sed, cursus neque. Vivamus id accumsan diam, vitae rhoncus velit. Maecenas pulvinar dui vitae commodo tempus. Nulla imperdiet est et velit fermentum, sed bibendum tortor vulputate. Quisque eget feugiat ante. Maecenas a ipsum dolor. Proin interdum eget lectus non aliquet. Morbi dignissim mi facilisis felis aliquam faucibus. Integer neque lorem, accumsan vitae mi ac, facilisis efficitur ipsum. Sed enim erat, malesuada at mauris non, elementum placerat nunc. Proin quis dolor et tellus tristique eleifend.</p></Col>
+    <Col xs={{span:12, order:0, }} sm={{span:12, order:0}} md={{span:6, order:1}} xl={{span:6, order:1}} lg={{span:6, order:1}}> <Image src={headshot}
+      alt="Seb smiling, dressed in a pleather jacket, button-down shirt, T-shirt and a beanie" fluid/></Col>
   </Row>
   <Row>
-    <Col lg={true}>1 of 3</Col>
-    <Col lg={true}>2 of 3</Col>
-    <Col lg={true}>3 of 3</Col>
+    <Col >1 of 3</Col>
+    <Col >2 of 3</Col>
+    <Col >3 of 3</Col>
   </Row>
 </Container>
 <Button>this a button!</Button>
