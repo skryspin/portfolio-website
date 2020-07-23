@@ -58,11 +58,11 @@ function Home() {
         </p>
 
       </header>
-      <Container fluid>
+  <Container fluid>
   <Row className="">
-    <Col xs={{span:12, order:1}} sm={{span:12, order:1}} md={{span:6, order:0}} xl={{span:6, order:0}} lg={{span:6, order:0}} className="px-4 px-sm-5 p-md-5 p-lg-5 p-xl-5" >
-    <p className=" text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lectus nunc, consequat id tellus porta, ultrices sollicitudin nisl. Mauris dapibus malesuada ultrices. Nulla aliquet, purus eget imperdiet fringilla, lorem diam tristique est, quis tempor ante ante in purus. Suspendisse nec faucibus ligula. Praesent lacus diam, tempus nec leo et, consectetur convallis nunc. Vestibulum facilisis vehicula aliquam. Curabitur suscipit quam at nibh sagittis, non viverra diam hendrerit. Ut sed euismod tortor. In hac habitasse platea dictumst. Curabitur hendrerit blandit iaculis. </p></Col>
-    <Col xs={{span:12, order:0, }} sm={{span:12, order:0}} md={{span:6, order:1}} xl={{span:6, order:1}} lg={{span:6, order:1}} className="px-1 px-sm-5 p-md-5 p-lg-5 p-xl-5"><Image className="shadow-lg" src={headshot}
+    <Col xs={{span:12, order:1}} sm={{span:12, order:1}} md={{span:6, order:0}} xl={{span:6, order:0}} lg={{span:6, order:0}} className="p-3 px-sm-5 p-md-5 p-lg-5 p-xl-5" >
+    <p className="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lectus nunc, consequat id tellus porta, ultrices sollicitudin nisl. Mauris dapibus malesuada ultrices. Nulla aliquet, purus eget imperdiet fringilla, lorem diam tristique est, quis tempor ante ante in purus. Suspendisse nec faucibus ligula. Praesent lacus diam, tempus nec leo et, consectetur convallis nunc. Vestibulum facilisis vehicula aliquam. Curabitur suscipit quam at nibh sagittis, non viverra diam hendrerit. Ut sed euismod tortor. In hac habitasse platea dictumst. Curabitur hendrerit blandit iaculis. </p></Col>
+    <Col xs={{span:12, order:0, }} sm={{span:12, order:0}} md={{span:6, order:1}} xl={{span:6, order:1}} lg={{span:6, order:1}} className="px-1 px-sm-5 p-md-5 p-lg-5 p-xl-5 "><Image className="shadow-lg" src={headshot}
       alt="Seb smiling, dressed in a pleather jacket, button-down shirt, T-shirt and a beanie" fluid/></Col>
   </Row>
   <Row>
