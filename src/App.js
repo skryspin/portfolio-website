@@ -68,8 +68,8 @@ function Home() {
     <p className="">
     Hi there! I'm Seb. I'm a software engineer, game developer, and artist. I strive to combine my coding skills with my creative passions. I'm looking for a career that will engage me <b>intellectually</b> and <b>creatively</b>.</p>
     <p>
-    I've developed 3D games in Unity, interned at IBM, and built my own websites. And a lot more.  <Link to='#projects'> Go to Projects -> </Link></p>
-    <p alt="I received numerous awards throughout my degree, including best project runner-up and best poster from our computer science department."> I graduated <i>summa cum laude</i> from Trinity College in 2020 with a BS in computer science. I was voted as the top student of the major by the faculty, and received numerous honors and awards. <Link alt="I was also part of InterArts, a specialized gateway program for arts students." to='#education'> Go to Academics -> </Link>
+    I've developed 3D games in Unity, interned at IBM, and built my own websites. And a lot more.  <Link to='#projects'> Go to Projects [placeholder]-> </Link></p>
+    <p alt="I received numerous awards throughout my degree, including best project runner-up and best poster from our computer science department."> I graduated <i>summa cum laude</i> from Trinity College in 2020 with a BS in computer science. I was voted as the top student of the major by the faculty, and received numerous honors and awards. <Link alt="I was also part of InterArts, a specialized gateway program for arts students." to='#education'> Go to Academics [placeholder] -> </Link>
     </p>
 </Col>
     <Col xs={{span:12, order:0, }} sm={{span:6, order:1}} md={{span:6, order:1}} xl={{span:6, order:1}} lg={{span:6, order:1}} className="pb-3 px-0 pt-0 px-sm-4 pt-sm-0 px-md-5 pb-md-5 pt-md-0 px-lg-5 pb-lg-5 pt-lg-0 px-xl-6 pb-xl-5"><Image className="shadow-lg w-100" src={headshot}
