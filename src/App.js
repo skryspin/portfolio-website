@@ -46,15 +46,15 @@ function Home() {
       <header className="App-header">
 
         <p>
-          This is my web development playground.
-          Say 'hi' to me in the following places:
+          This is my under-construction web dev playground.
+          Say 'hi' to me here:
           <a
             className="App-link"
             href="https://www.linkedin.com/in/skryspin/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Seb Kryspin on LinkedIn
+             Seb Kryspin on LinkedIn
           </a>
         </p>
       </header>
@@ -67,33 +67,15 @@ function Home() {
     <Col xs={{span:12, order:1}} sm={{span:6, order:0}} md={{span:6, order:0}} xl={{span:6, order:0}} lg={{span:6, order:0}} className="p-3 px-sm-4 pt-sm-0 px-md-5 pb-md-5 pt-md-0 px-lg-5 pb-lg-5 pt-lg-0 pb-xl-5 px-xl-5 pt-xl-0" >
     <p className="">
     Hi there! I'm Seb. I'm a software engineer, game developer, and artist. I strive to combine my coding skills with my creative passions. I'm looking for a career that will engage me <b>intellectually</b> and <b>creatively</b>.</p>
-    <p> I interned at IBM in the summer of 2019 and before that I worked as an instructor at iD Tech camp. <link href= > Learn more in Work Experience -> </link> </p>
-
-    <p alt="I received numerous awards throughout my degree, including best project runner-up and best poster from our computer science department."> I graduated <i>summa cum laude</i> from Trinity College in 2020 with a BS in computer science. I was recognized as a top-performing student in my major by numerous awards, including the inaugural Ralph A. Morelli Prize in Computer Science. As my senior project, I created a 3D platformer game with Unity.  While at school, I also participated actively in theatre and worked both on- and off-stage. My first year at Trinity I was also part of InterArts, a specialized gateway program for arts students. Learn more in Projects -> <br />
-    </p>
     <p>
-    </p></Col>
+    I've developed 3D games in Unity, interned at IBM, and built my own websites. And a lot more.  <Link to='#projects'> Go to Projects -> </Link></p>
+    <p alt="I received numerous awards throughout my degree, including best project runner-up and best poster from our computer science department."> I graduated <i>summa cum laude</i> from Trinity College in 2020 with a BS in computer science. I was voted as the top student of the major by the faculty, and received numerous honors and awards. <Link alt="I was also part of InterArts, a specialized gateway program for arts students." to='#education'> Go to Academics -> </Link>
+    </p>
+</Col>
     <Col xs={{span:12, order:0, }} sm={{span:6, order:1}} md={{span:6, order:1}} xl={{span:6, order:1}} lg={{span:6, order:1}} className="pb-3 px-0 pt-0 px-sm-4 pt-sm-0 px-md-5 pb-md-5 pt-md-0 px-lg-5 pb-lg-5 pt-lg-0 px-xl-6 pb-xl-5"><Image className="shadow-lg w-100" src={headshot}
       alt="Seb smiling, dressed in a pleather jacket, button-down shirt, T-shirt and a beanie" fluid/></Col>
   </Row>
-  <Row>
-    <Col >1 of 3</Col>
-    <Col >2 of 3</Col>
-    <Col >3 of 3</Col>
-  </Row>
-</Container>
-<Button>this a button!</Button>
-<Dropdown>
-  <Dropdown.Toggle variant="success" id="dropdown-basic">
-    Dropdown Button
-  </Dropdown.Toggle>
-
-  <Dropdown.Menu>
-    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-  </Dropdown.Menu>
-</Dropdown>
+  </Container>
     </div>
   );
 }
