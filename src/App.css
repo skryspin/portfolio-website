@@ -6,7 +6,8 @@ some hacks from Aria to size the image relative to the text on about-me-page. Br
 when the column vertically stacks, doesn't like shadows either.
 .image-container { position: relative; }
 .image-container-image { position: absolute; top: 0; left: 0; height: 100%; width: 100%; }
-.image-container-image-contain { object-fit: contain } */
+*/
+/*.of {position: absolute; top: 0; left: 0; height: 100%; width: 100%; object-fit: contain } */
 .App-logo {
   height: 40vmin;
   pointer-events: none;

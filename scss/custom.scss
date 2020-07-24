@@ -1,0 +1,17 @@
+/*import the necessary scss from bootstrap
+ * See https://getbootstrap.com/docs/4.4/getting-started/theming/#importing
+ */
+
+// Required
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+/* -- start my customizations -- */
+$spacers: (
+  6: ($spacer * 5),
+  7: ($spacer * 10)
+);
+
+/* -- end customizations -- */
+@import "../node_modules/bootstrap/scss/bootstrap";
