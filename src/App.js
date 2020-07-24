@@ -59,10 +59,13 @@ function Home() {
         </p>
       </header>
   <Container fluid>
+  <Row>
+    <Col id="secret" className="pb-1 pt-4 py-1 px-sm-4 pt-sm-3 px-md-5 pt-md-3 pt-lg-3 px-lg-5 px-xl-5" xs={{span:12}}><h1>About me</h1></Col>
+  </Row>
   <Row className="">
-    <Col xs={{span:12, order:1}} sm={{span:6, order:0}} md={{span:6, order:0}} xl={{span:6, order:0}} lg={{span:6, order:0}} className="p-3 px-sm-5 p-md-5 p-lg-5 p-xl-5" >
-    <p className="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lectus nunc, consequat id tellus porta, ultrices sollicitudin nisl. Mauris dapibus malesuada ultrices. Nulla aliquet, purus eget imperdiet fringilla, lorem diam tristique est, quis tempor ante ante in purus. Suspendisse nec faucibus ligula. Praesent lacus diam, tempus nec leo et, consectetur convallis nunc. Vestibulum facilisis vehicula aliquam. Curabitur suscipit quam at nibh sagittis, non viverra diam hendrerit. Ut sed euismod tortor. In hac habitasse platea dictumst. Curabitur hendrerit blandit iaculis. </p></Col>
-    <Col xs={{span:12, order:0, }} sm={{span:6, order:1}} md={{span:6, order:1}} xl={{span:6, order:1}} lg={{span:6, order:1}} className="py-3 px-0 pt-sm-3 px-sm-2 p-md-5 p-lg-5 pt-xl-5 px-xl-6 "><Image className="shadow-lg of" src={headshot}
+    <Col xs={{span:12, order:1}} sm={{span:6, order:0}} md={{span:6, order:0}} xl={{span:6, order:0}} lg={{span:6, order:0}} className="p-3 px-sm-4 pt-sm-0 px-md-5 pb-md-5 pt-md-0 px-lg-5 pb-lg-5 pt-lg-0 pb-xl-5 px-xl-5 pt-xl-0" >
+    <p className="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lectus nunc, consequat id tellus porta, ultrices sollicitudin nisl. Mauris dapibus malesuada ultrices. Nulla aliquet, purus eget imperdiet fringilla, lorem diam tristique est, quis tempor ante ante in purus. Suspendisse nec faucibus ligula. Praesent lacus diam, tempus nec leo et, consectetur convallis nunc. Vestibulum facilisis vehicula aliquam. Curabitur suscipit quam at nibh sagittis, non viverra diam hendrerit. Ut sed euismod tortor. In hac habitasse platea dictumst. Curabitur hendrerit blandit iaculis. </p></Col>
+    <Col xs={{span:12, order:0, }} sm={{span:6, order:1}} md={{span:6, order:1}} xl={{span:6, order:1}} lg={{span:6, order:1}} className="pb-3 px-0 pt-0 px-sm-4 pt-sm-0 px-md-5 pb-md-5 pt-md-0 px-lg-5 pb-lg-5 pt-lg-0 px-xl-6 pb-xl-5"><Image className="shadow-lg w-100" src={headshot}
       alt="Seb smiling, dressed in a pleather jacket, button-down shirt, T-shirt and a beanie" fluid/></Col>
   </Row>
   <Row>
