@@ -52,8 +52,9 @@ function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-             Seb Kryspin on LinkedIn
+             Seb on LinkedIn
           </a>
+          <a className="App-link" href="https://www.github.com/skryspin/">, GitHub </a>
         </p>
       </header>
   <Container className="" fluid>
@@ -66,7 +67,7 @@ function Home() {
     <p className="">
     Hi there! I'm Seb. I'm a software engineer, game developer, and artist. I strive to combine my coding skills with my creative passions. I'm looking for a career that will engage me <b>intellectually</b> and <b>creatively</b>.</p>
     <p>
-    I've developed 3D games in Unity, interned at IBM, and built my own websites. And a lot more.  <Link to='#projects'> Go to Projects [placeholder]-> </Link></p>
+    I've developed 3D games in Unity, interned at IBM, and <a href="https://github.com/skryspin/portfolio-website"> built my own website</a>. And a lot more.  <Link to='#projects'> Go to Projects [placeholder]-> </Link></p>
     <p alt="I received numerous awards throughout my degree, including best project runner-up and best poster from our computer science department."> I graduated <i>summa cum laude</i> from Trinity College in 2020 with a BS in computer science. I was voted as the top student of the major by the faculty, and received numerous honors and awards. <Link alt="I was also part of InterArts, a specialized gateway program for arts students." to='#education'> Go to Academics [placeholder] -> </Link>
     </p>
 </Col>
