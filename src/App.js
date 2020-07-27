@@ -8,9 +8,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 
-
-
-
 import headshot from './headshot.jpg'; // Tell webpack this JS file uses this image
 
 import {
@@ -30,12 +27,53 @@ export default function App() {
         <Route path = "/home">
           <Home />
         </Route>
+        <Route path = "/react-practice">
+          <Practice />
+        </Route>
         <Route path="*">
           <InvalidPath />
         </Route>
       </Switch>
+
     </Router>
   )
+}
+
+//A Function component accepts properties and returns a React element
+function Practice(props) {
+  function formatName(user) {
+    return user.firstName + ' ' + user.lastName;
+  }
+
+  function getGreeting(user) {
+    if (user) {
+      return <h1>Hello, {formatName(user)}!</h1>;
+    }
+    return <h1> Hello, Stranger. </h1>;
+  }
+  const user = {
+    firstName:'Seb',
+    lastName: 'Kryspin'
+  };
+
+  const element = (
+    <h1>{getGreeting(user)}</h1> //JSX is an expression too, can be returned and assigned as variables
+  );
+
+  const attr = <div tabIndex = "0"></div> //quotes to specify string literals as attributes
+  const express = <img src={user.avatarUrl}></img>; //embed javaScript into attribute
+  const empty = <img src="whatever" /> //use '/> to close empty tags
+
+  //An element describes what you want to see on the screen
+
+  return (element);
+}
+
+//A Class component is equivalent
+class Welcome extends React.Component {
+  render() {
+    return <h1> Hello, {this.props.name}</h1>;
+  }
 }
 
 function Home() {
