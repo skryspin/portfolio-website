@@ -9,14 +9,54 @@ import './App.css';
 //NOTE: Use STATE to modify stuff
 function Practice(props) {
   return (
-    <div>
-      <Welcome name="Seb" />
-      <Welcome name="Chelsea" />
-      <Welcome name="John" />
-    </div>
+    <Clock />
   )
 }
 
+//A fine component that doesn't modify the properties
+// function Clock(props) {
+//   return (
+//     <div>
+//       <h1>Hello, World</h1>
+//       <h2>It is {props.date.toLocaleTimeString()}.</h2>
+//     </div>
+//   )
+// }
+
+//The Clock, but as a class so we can use state
+class Clock extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {date: new Date()};
+  }
+
+  //Runs after the component output has been rendered to the DOM
+  componentDidMount() {
+    this.timerID = setInterval(
+      () => this.tick(),
+      1000
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  tick() {
+    this.setState({
+      data: new Date()
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Hello, World</h1>
+        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+      </div>
+    )
+  }
+}
 
 function Avatar(props) {
   return (
