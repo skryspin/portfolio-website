@@ -74,8 +74,9 @@ function Home() {
     <p alt="I received numerous awards throughout my degree, including best project runner-up and best poster from our computer science department."> I graduated <i>summa cum laude</i> from Trinity College in 2020 with a BS in computer science. I was voted as the top student of the major by the faculty, and received numerous honors and awards. <Link alt="I was also part of InterArts, a specialized gateway program for arts students." to='#education'> Go to Academics [placeholder] -> </Link>
     </p>
 </Col>
-    <Col xs={{span:12, order:0, }} sm={{span:6, order:1}} md={{span:6, order:1}} xl={{span:6, order:1}} lg={{span:6, order:1}} className="pb-3 px-0 pt-0 px-sm-4 pt-sm-0 px-md-5 pb-md-5 pt-md-0 px-lg-5 pb-lg-5 pt-lg-0 px-xl-6 pb-xl-5"><Image className="shadow-lg w-100" src={headshot}
-      alt="Seb smiling, dressed in a pleather jacket, button-down shirt, T-shirt and a beanie" fluid/></Col>
+    <Col xs={{span:12, order:0, }} sm={{span:6, order:1}} md={{span:6, order:1}} xl={{span:6, order:1}} lg={{span:6, order:1}} className="pb-3 px-0 pt-0 px-sm-4 pt-sm-0 px-md-5 pb-md-5 pt-md-0 px-lg-5 pb-lg-5 pt-lg-0 px-xl-6 pb-xl-5">
+      <Image className="shadow-lg w-100" src={headshot} alt="Seb smiling, dressed in a pleather jacket, button-down shirt, T-shirt and a beanie" fluid />
+    </Col>
   </Row>
   </Container>
     </div>
