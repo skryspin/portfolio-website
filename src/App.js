@@ -9,6 +9,7 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 
 import headshot from './headshot.jpg'; // Tell webpack this JS file uses this image
+import placeholder from './Placeholder.png';
 import Practice from './Practice';
 
 import {
@@ -63,14 +64,14 @@ function Home() {
   <Container className="" fluid>
   <Row>
     <Col id="secret" className="pb-1 pt-4 py-1 px-sm-4 pt-sm-3 px-md-5 pt-md-3 pt-lg-3 px-lg-5 px-xl-5" xs={{span:12}}><h1>About me</h1>    <h5>Programmer and artist</h5>
-</Col>
+    </Col>
   </Row>
   <Row className="">
     <Col xs={{span:12, order:1}} sm={{span:6, order:0}} md={{span:6, order:0}} xl={{span:6, order:0}} lg={{span:6, order:0}} className="p-3 px-sm-4 pt-sm-0 px-md-5 pb-md-5 pt-md-0 px-lg-5 pb-lg-5 pt-lg-0 pb-xl-5 px-xl-5 pt-xl-0" >
     <p className="">
     Hi there! I'm Seb. I'm a software engineer, game developer, and artist. I strive to combine my coding skills with my creative passions. I'm looking for a career that will engage me <b>intellectually</b> and <b>creatively</b>.</p>
     <p>
-    I've developed 3D games in Unity, interned at IBM, and <a href="https://github.com/skryspin/portfolio-website"> built my own website</a>. And a lot more.  <Link to='#projects'> Go to Projects [placeholder]-> </Link></p>
+    I've developed 3D games in Unity, interned at IBM, and <a href="https://github.com/skryspin/portfolio-website"> built my own website</a>. And a lot more.  <a href='#projects'> Go to Projects [placeholder]-> </a></p>
     <p alt="I received numerous awards throughout my degree, including best project runner-up and best poster from our computer science department."> I graduated <i>summa cum laude</i> from Trinity College in 2020 with a BS in computer science. I was voted as the top student of the major by the faculty, and received numerous honors and awards. <Link alt="I was also part of InterArts, a specialized gateway program for arts students." to='#education'> Go to Academics [placeholder] -> </Link>
     </p>
 </Col>
@@ -78,6 +79,26 @@ function Home() {
       <Image className="shadow-lg w-100" src={headshot} alt="Seb smiling, dressed in a pleather jacket, button-down shirt, T-shirt and a beanie" fluid />
     </Col>
   </Row>
+  </Container>
+  <p id="secret" className="pb-1 pt-4 py-1 px-sm-4 pt-sm-3 px-md-5 pt-md-3 pt-lg-3 px-lg-5 px-xl-5" xs={{span:12}}><h1 class="text-center" id = "projects">Projects</h1>
+</p>
+  <Container className="projects d-flex justify-content-center flex-wrap " fluid>
+    <Row className="">
+      <Col className="p-2  d-flex justify-content-center" sm={12} md={6}>
+        <Image src={placeholder} alt="Placeholder image" fluid/>
+      </Col>
+      <Col className="p-2  d-flex justify-content-center" sm={12} md={6}>
+        <Image src={placeholder} alt="Placeholder image" fluid/>
+      </Col>
+    </Row>
+    <Row className="">
+      <Col className="p-2 d-flex justify-content-center" sm={12} md={6}>
+        <Image src={placeholder} alt="Placeholder image" fluid/>
+      </Col>
+      <Col className="p-2 d-flex justify-content-center" sm={12} md={6}>
+        <Image src={placeholder} alt="Placeholder image" fluid/>
+      </Col>
+    </Row>
   </Container>
     </div>
   );
