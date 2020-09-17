@@ -7,6 +7,9 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
+import Card from 'react-bootstrap/Card';
+import Fade from 'react-bootstrap/Fade';
+
 
 import headshot from './headshot.jpg'; // Tell webpack this JS file uses this image
 import placeholder from './Placeholder.png';
@@ -81,7 +84,11 @@ function Home() {
   </Row>
   </Container>
 
+
   <Projects />
+  <Card bg="secondary" text="black">
+    <Card.Body> <p>Hello this is a card test </p> </Card.Body>
+  </Card>
     </div>
   );
 }
@@ -95,23 +102,62 @@ function Projects(props) {
     <Container className="projects  justify-content-center " fluid>
       <Row className="">
         <Col className="p-2 d-flex  justify-content-center" sm={12} md={6} lg={6} xl={6} fluid>
-          <Image src={placeholder} alt="Placeholder image" fluid/>
+          <ImageOverlay/>
         </Col>
         <Col className="p-2  d-flex justify-content-center" sm={12} md={6} lg={6} xl={6} fluid>
-          <Image src={placeholder} alt="Placeholder image" fluid/>
+          <ImageOverlay/>
         </Col>
       </Row>
       <Row className="">
         <Col className="p-2 d-flex justify-content-center" sm={12} md={6} lg={6} xl={6} fluid>
-          <Image src={placeholder} alt="Placeholder image" fluid/>
+          <ImageOverlay/>
         </Col>
         <Col className="p-2 d-flex justify-content-center" sm={12} md={6} lg={6} xl={6} fluid>
-          <Image src={placeholder} alt="Placeholder image" fluid/>
+          <ImageOverlay/>
         </Col>
       </Row>
     </Container>
   </div>
   )
+}
+
+class ImageOverlay extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleEnter = this.handleEnter.bind(this); //gotta bind functions that are called without ()
+    this.handleExit = this.handleExit.bind(this); //gotta bind functions that are called without ()
+
+    this.state={isShown:false};
+  }
+
+  handleEnter() {
+    this.setState({isShown:true});
+  }
+
+  handleExit() {
+    this.setState({isShown:false});
+
+  }
+
+  render() {
+      return (
+      <div>
+      <Card bg="dark" text="white" onMouseEnter={this.handleEnter} onMouseLeave={this.handleExit}>
+        <Card.Img src={placeholder} fluid/>
+        <Fade in={this.state.isShown} >
+        <Card.ImgOverlay style={{padding:0, backgroundColor: 'hsla(0, 6%, 0%, 0.9)'}}>
+          <div style={{padding:'2em'}}>
+          <Card.Title>Job Hunter: A Game About Getting A Job</Card.Title>
+          <Card.Text bg="dark">
+            <p>A 3D platformer game built in Unity. </p>
+          </Card.Text>
+          </div>
+        </Card.ImgOverlay>
+      </Fade>
+      </Card>
+  </div>
+  )
+  }
 }
 
 function InvalidPath() {
