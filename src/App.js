@@ -102,7 +102,7 @@ function Projects(props) {
     <Container className="projects  justify-content-center " fluid>
       <Row className="">
         <Col className="p-2 d-flex  justify-content-center" sm={12} md={6} lg={6} xl={6} fluid>
-          <ImageOverlay/>
+          <ImageOverlay title="Job Hunter: A Game About Getting A Job" description="A 3D platformer game built in Unity. "/>
         </Col>
         <Col className="p-2  d-flex justify-content-center" sm={12} md={6} lg={6} xl={6} fluid>
           <ImageOverlay/>
@@ -124,6 +124,7 @@ function Projects(props) {
 class ImageOverlay extends React.Component {
   constructor(props) {
     super(props);
+
     this.handleEnter = this.handleEnter.bind(this); //gotta bind functions that are called without ()
     this.handleExit = this.handleExit.bind(this); //gotta bind functions that are called without ()
 
@@ -147,9 +148,9 @@ class ImageOverlay extends React.Component {
         <Fade in={this.state.isShown} >
         <Card.ImgOverlay style={{padding:0, backgroundColor: 'hsla(0, 6%, 0%, 0.9)'}}>
           <div style={{padding:'2em'}}>
-          <Card.Title>Job Hunter: A Game About Getting A Job</Card.Title>
+          <Card.Title>{this.props.title}</Card.Title>
           <Card.Text bg="dark">
-            <p>A 3D platformer game built in Unity. </p>
+            <p>{this.props.description}</p>
           </Card.Text>
           </div>
         </Card.ImgOverlay>
