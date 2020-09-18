@@ -13,6 +13,9 @@ import Fade from 'react-bootstrap/Fade';
 
 import headshot from './headshot.jpg'; // Tell webpack this JS file uses this image
 import placeholder from './Placeholder.png';
+import jh_image from './jobhunter.png';
+import website from './website.png';
+import deathsbrother from './deaths_brother.jpg'
 import Practice from './Practice';
 
 import {
@@ -97,15 +100,15 @@ function Projects(props) {
     <Container className="projects  justify-content-center " fluid>
       <Row className="">
         <Col className="p-2 d-flex  justify-content-center" sm={12} md={6} lg={6} xl={6} fluid>
-          <ImageOverlay title="Job Hunter: A Game About Getting A Job" description="A 3D platformer game created in Unity, coded with C#. "/>
+          <ImageOverlay photo={jh_image} title="Job Hunter: A Game About Getting A Job" description="A 3D platformer game created in Unity, coded with C#. "/>
         </Col>
         <Col className="p-2  d-flex justify-content-center" sm={12} md={6} lg={6} xl={6} fluid>
-          <ImageOverlay title="Skryspin.com Website" description="I'm building my website with React and deploying it with Netlify and GitHub."/>
+          <ImageOverlay photo={website} title="Skryspin.com Website" description="I'm building my website with React and deploying it with Netlify and GitHub."/>
         </Col>
       </Row>
       <Row className="">
         <Col className="p-2 d-flex justify-content-center" sm={12} md={6} lg={6} xl={6} fluid>
-          <ImageOverlay title="Projection Design for Death's Brother: A Hair Piece" description="I designed creative light projections to move across the stage and esablish the mood for each scene."/>
+          <ImageOverlay photo={deathsbrother} title="Projection Design for Death's Brother: A Hair Piece" description="I designed creative light projections to move across the stage and establish the mood for each scene."/>
         </Col>
         <Col className="p-2 d-flex justify-content-center" sm={12} md={6} lg={6} xl={6} fluid>
           <ImageOverlay title="Software Engineering Intern at IBM" description=""/>
@@ -123,6 +126,7 @@ class ImageOverlay extends React.Component {
     this.handleEnter = this.handleEnter.bind(this); //gotta bind functions that are called without ()
     this.handleExit = this.handleExit.bind(this); //gotta bind functions that are called without ()
 
+
     this.state={isShown:false};
   }
 
@@ -136,10 +140,14 @@ class ImageOverlay extends React.Component {
   }
 
   render() {
+    var image = placeholder;
+    if (this.props.photo) {
+      image = this.props.photo;
+    }
       return (
       <div>
       <Card bg="dark" text="white" onMouseEnter={this.handleEnter} onMouseLeave={this.handleExit}>
-        <Card.Img src={placeholder} fluid/>
+        <Card.Img src={image} fluid/>
         <Fade in={this.state.isShown} >
         <Card.ImgOverlay style={{padding:0, backgroundColor: 'hsla(0, 6%, 0%, 0.9)'}}>
           <div style={{padding:'2em'}}>
