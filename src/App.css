@@ -1,7 +1,13 @@
-.App {
+/* .App {
   text-align: center;
-}
-
+} */
+/*
+some hacks from Aria to size the image relative to the text on about-me-page. Breaks
+when the column vertically stacks, doesn't like shadows either.
+.image-container { position: relative; }
+.image-container-image { position: absolute; top: 0; left: 0; height: 100%; width: 100%; }
+*/
+/*.of {position: absolute; top: 0; left: 0; height: 100%; width: 100%; object-fit: contain } */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -15,7 +21,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;

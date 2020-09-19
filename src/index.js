@@ -1,6 +1,3 @@
-// import 'bootstrap/dist/css/bootstrap.css';
-// Put any other imports below so that CSS from your
-// components takes precedence over default styles.
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -8,10 +5,13 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const element = (<React.StrictMode>
+  <App />
+</React.StrictMode>);
+
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  element,
   document.getElementById('root')
 );
 
