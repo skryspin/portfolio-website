@@ -154,7 +154,7 @@ class ImageOverlay extends React.Component {
     }
       return (
       <Card border="dark" bg="white" text="black" onMouseEnter={this.handleEnter} onMouseLeave={this.handleExit}>
-        <a href="/react-practice">
+        <a href=""> 
 
         <Card.Img variant="bottom" src={image} fluid/>
       </a>
