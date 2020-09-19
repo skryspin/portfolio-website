@@ -15,7 +15,8 @@ import headshot from './headshot.jpg'; // Tell webpack this JS file uses this im
 import placeholder from './Placeholder.png';
 import jh_image from './jobhunter.png';
 import website from './website.png';
-import deathsbrother from './deaths_brother.jpg'
+import deathsbrother from './deaths_brother.jpg';
+import ibmlogo from './ibm_intern.png';
 import Practice from './Practice';
 
 import {
@@ -100,10 +101,13 @@ function Projects(props) {
     <Container className="projects  justify-content-center " fluid>
       <Row className="">
         <Col className="p-2 d-flex  justify-content-center" sm={12} md={6} lg={6} xl={6} fluid>
-          <ImageOverlay photo={jh_image} title="Job Hunter: A Game About Getting A Job" description="A 3D platformer game created in Unity, coded with C#. "/>
+          <ImageOverlay photo={jh_image} title="Job Hunter: A Game About Getting A Job" description={<div>A 3D platformer game created in Unity, coded with C#. Learn about the 3D worlds and features in my
+             <a href="https://youtu.be/yRQBCT2Nj4s"> presentation </a>
+             about the game.</div>}/>
         </Col>
         <Col className="p-2  d-flex justify-content-center" sm={12} md={6} lg={6} xl={6} fluid>
-          <ImageOverlay photo={website} title="Skryspin.com Website" description="I'm building my website with React and deploying it with Netlify and GitHub."/>
+          <ImageOverlay photo={website} title="Skryspin.com Website" description={<div> I'm building my website with React. I deploy using GitHub and Netlify. <a href="https://github.com/skryspin/portfolio-website"> View source code </a> </div>}
+          />
         </Col>
       </Row>
       <Row className="">
@@ -111,7 +115,7 @@ function Projects(props) {
           <ImageOverlay photo={deathsbrother} title="Projection Design for Death's Brother: A Hair Piece" description="I designed creative light projections to move across the stage and establish the mood for each scene."/>
         </Col>
         <Col className="p-2 d-flex justify-content-center" sm={12} md={6} lg={6} xl={6} fluid>
-          <ImageOverlay title="Software Engineering Intern at IBM" description=""/>
+          <ImageOverlay photo={ibmlogo} title="Software Engineering Intern @ IBM" description="I worked with a small team of interns to solve a huge problem: how to get tons of data from different sources into a single, organized database."/>
         </Col>
       </Row>
     </Container>
@@ -125,9 +129,9 @@ class ImageOverlay extends React.Component {
 
     this.handleEnter = this.handleEnter.bind(this); //gotta bind functions that are called without ()
     this.handleExit = this.handleExit.bind(this); //gotta bind functions that are called without ()
+    this.handleClick = this.handleClick.bind(this);
 
-
-    this.state={isShown:false};
+    this.state={isShown:true};
   }
 
   handleEnter() {
@@ -135,7 +139,11 @@ class ImageOverlay extends React.Component {
   }
 
   handleExit() {
-    this.setState({isShown:false});
+    this.setState({isShown:true}); //keep it there
+
+  }
+
+  handleClick() {
 
   }
 
@@ -145,24 +153,29 @@ class ImageOverlay extends React.Component {
       image = this.props.photo;
     }
       return (
-      <div>
-      <Card bg="dark" text="white" onMouseEnter={this.handleEnter} onMouseLeave={this.handleExit}>
-        <Card.Img src={image} fluid/>
+      <Card border="dark" bg="white" text="black" onMouseEnter={this.handleEnter} onMouseLeave={this.handleExit}>
+        <a href="/react-practice">
+
+        <Card.Img variant="bottom" src={image} fluid/>
+      </a>
+
         <Fade in={this.state.isShown} >
-        <Card.ImgOverlay style={{padding:0, backgroundColor: 'hsla(0, 6%, 0%, 0.9)'}}>
           <div style={{padding:'2em'}}>
           <Card.Title>{this.props.title}</Card.Title>
-          <Card.Text bg="dark">
+          <Card.Text>
             <p>{this.props.description}</p>
           </Card.Text>
           </div>
-        </Card.ImgOverlay>
       </Fade>
       </Card>
-  </div>
   )
   }
 }
+
+//        {/* <Card.ImgOverlay style={{padding:0, backgroundColor: 'hsla(0, 6%, 0%, 0.9)'}}> */}
+//        </Card.ImgOverlay>
+
+
 
 function InvalidPath() {
   return (
