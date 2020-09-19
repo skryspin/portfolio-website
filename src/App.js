@@ -79,7 +79,7 @@ function Home() {
     Hi there! I'm Seb. I'm a software engineer, game developer, and artist. I strive to combine my coding skills with my creative passions. I'm looking for a career that will engage me <b>intellectually</b> and <b>creatively</b>.</p>
     <p>
     I've developed 3D games in Unity, interned at IBM, and <a href="https://github.com/skryspin/portfolio-website"> built my own website</a>. And a lot more.  <a href='#projects'>Projects-></a></p>
-    <p alt="I received numerous awards throughout my degree, including best project runner-up and best poster from our computer science department."> I graduated <i>summa cum laude</i> from Trinity College in 2020 with a BS in computer science. I was voted as the top student of the major by the faculty, and received numerous honors and awards. <a alt="I was also part of InterArts, a specialized gateway program for arts students." href='#education'> Academics [placeholder] -> </a>
+    <p alt="I received numerous awards throughout my degree, including best project runner-up and best poster from our computer science department."> I graduated <i>summa cum laude</i> from Trinity College in 2020 with a BS in computer science. I was voted as the top student of the major by the faculty, and received numerous honors and awards. I was also part of InterArts, a specialized gateway program for arts students.
     </p>
 </Col>
     <Col xs={{span:12, order:0, }} sm={{span:6, order:1}} md={{span:6, order:1}} xl={{span:6, order:1}} lg={{span:6, order:1}} className="pb-3 px-0 pt-0 px-sm-4 pt-sm-0 px-md-5 pb-md-5 pt-md-0 px-lg-5 pb-lg-5 pt-lg-0 px-xl-6 pb-xl-5">
@@ -91,6 +91,8 @@ function Home() {
     </div>
   );
 }
+
+//<a alt="." href='#education'> Academics [placeholder] -> </a>
 
 /* Renders the Projects section */
 function Projects(props) {
@@ -154,7 +156,7 @@ class ImageOverlay extends React.Component {
     }
       return (
       <Card border="dark" bg="white" text="black" onMouseEnter={this.handleEnter} onMouseLeave={this.handleExit}>
-        <a href="/home"> 
+        <a href="/home">
 
         <Card.Img variant="bottom" src={image} fluid/>
       </a>
